@@ -1,0 +1,29 @@
+﻿@{
+     ViewData["Title"] = "Roster List";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab" id="table1">
+    
+    </table>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+         LoadData();
+    });
+
+    function LoadData()
+    {
+         $("#table1").load("/Roster/GetPartial");
+    }
+</script>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="~/js/notification.js"></script>
